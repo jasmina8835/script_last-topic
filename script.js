@@ -24,8 +24,8 @@ function renderCart() {
     document.querySelector('ul').innerHTML = ''
     let p = JSON.parse(localStorage.getItem('products'))
     p.map((prd) => {
-        let li = document.querySelector('li')
-        li.innerText = prd.name + ' |soni: ' + prd.count
+        let li = document.createElement('li')
+        li.innerHTML = prd.name + ' | Soni: ' + prd.count
         document.querySelector('ul').append(li)
     })
 }
